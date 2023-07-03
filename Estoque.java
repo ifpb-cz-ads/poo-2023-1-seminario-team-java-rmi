@@ -123,4 +123,5 @@ public class Estoque extends UnicastRemoteObject implements Loja {
     public List<Integer> obterItensCarrinho() throws RemoteException {
         return new ArrayList<>(carrinho);
     }
+
 }
