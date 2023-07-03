@@ -95,7 +95,7 @@ public class Client {
         for (int i = 0; i < produtos.size(); i++) {
             int codigo = produtos.get(i);
             String nome = nomesProdutos.get(i);
-            System.out.println((i + 1) + ". " + nome + " (Código: " + codigo + ")");
+            System.out.println((i + 1) + ". " + nome + " (Codigo: " + codigo + ")");
         }
         System.out.println("0. Voltar");
 
