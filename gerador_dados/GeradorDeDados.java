@@ -18,9 +18,9 @@ public class GeradorDeDados extends UnicastRemoteObject implements IPessoa {
 
     String[] motivos = {"chamou um professor de comunista","escreveu algo no mural dos direitos humanos","praticou crimes de odio na frente de wellington","roubou ketchup da cantina e deu calote em cicero","quebrou cadeira","usou var em vez de let na disciplina de linguagem de script","foi pra aula de fabio sem animação","usou a camisa do mr.robot"};
     
-}
 
-Random gerador = new Random();
+
+    Random gerador = new Random();
 
 
 
@@ -60,3 +60,5 @@ Random gerador = new Random();
         return motivo;
 
     }
+
+}

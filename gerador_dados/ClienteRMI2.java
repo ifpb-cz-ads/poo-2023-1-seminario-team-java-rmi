@@ -1,3 +1,5 @@
+package gerador_dados;
+
 import java.rmi.Naming;
 import java.util.Random;
 import java.util.Scanner;
