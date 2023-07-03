@@ -19,9 +19,6 @@ public class Estoque extends UnicastRemoteObject implements Loja {
         produtosPorCategoria = new HashMap<>();
         carrinho = new ArrayList<>();
 
-        /*nome.put(1, "Iphone X");
-        estoque.put(1, 10);
-        preco.put(1, 3999.99);*/
         // Inicializar alguns itens de exemplo
         // Adicionar itens da categoria "Headset Gamer"
         adicionarItem(1, "Headset Gamer Redragon Zeus X", 10, 279.99, "Headset Gamer");
