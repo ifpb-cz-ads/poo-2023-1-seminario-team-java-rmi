@@ -45,6 +45,7 @@ public class Client {
                 exibirMenuPrincipal();
                 break;
         }
+        scanner.close();
     }
 
     private static void exibirMenuCategorias() throws RemoteException {
@@ -68,6 +69,7 @@ public class Client {
             System.out.println("Opção inválida!");
             exibirMenuCategorias();
         }
+        scanner.close();
     }
 
     private static void exibirItensCategoria(String categoria) throws RemoteException {
@@ -95,6 +97,7 @@ public class Client {
             System.out.println("Opção inválida!");
             exibirItensCategoria(categoria);
         }
+        scanner.close();
     }
 
     private static void adicionarItemAoCarrinho(int codigo) throws RemoteException {
@@ -121,5 +124,7 @@ public class Client {
             System.out.println("Opção inválida!");
             exibirCarrinho();
         }
+        scanner.close();
     }
+
 }
