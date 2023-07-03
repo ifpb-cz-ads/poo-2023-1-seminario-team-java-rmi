@@ -21,7 +21,7 @@ O projeto está organizado da seguinte maneira:
 - `Loja` - Contém a interface remota `Loja` que define os métodos disponíveis para acesso remoto.
 - `Estoque` - Implementação da interface `Loja`. Esta classe fornece a lógica para consultar informações sobre os produtos e adicionar itens ao carrinho.
 - `Cliente` - Aplicação do cliente que se conecta ao servidor RMI e interage com a loja virtual.
-- `Cliente` - Inicializa o objeto remoto e registra no registro RMI para que os clientes possam localizá-lo.
+- `Server` - Inicializa o objeto remoto e registra no registro RMI para que os clientes possam localizá-lo.
 - `README.md` - Este arquivo que fornece informações sobre o projeto.
 
 ## Como executar
