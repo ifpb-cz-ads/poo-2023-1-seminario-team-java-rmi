@@ -10,16 +10,19 @@ public class Estoque extends UnicastRemoteObject implements Loja {
     private Map<Integer, Integer> estoque;
     private Map<Integer, Double> preco;
     private Map<String, List<Integer>> produtosPorCategoria;
+    private List<Integer> carrinho;
 
     public Estoque() throws RemoteException {
         nome = new HashMap<>();
         estoque = new HashMap<>();
         preco = new HashMap<>();
         produtosPorCategoria = new HashMap<>();
+        carrinho = new ArrayList<>();
 
         /*nome.put(1, "Iphone X");
         estoque.put(1, 10);
         preco.put(1, 3999.99);*/
+        // Inicializar alguns itens de exemplo
         adicionarItem(1, "Iphone X", 10, 3000.99, "Celular");
         adicionarItem(2, "Iphone 13", 5, 5000.99, "Celular");
         adicionarItem(3, "Iphone 13 Pro Max", 8, 5999.99, "Celular");
@@ -51,5 +54,30 @@ public class Estoque extends UnicastRemoteObject implements Loja {
     public void alterarEstoqueItem(int codigo, int quantidade) throws RemoteException {
         estoque.put(codigo, quantidade);
         System.out.println(" Estoque do item: " + codigo + " atualizado para: " + quantidade);
+    }
+    public List<String> obterCategorias() throws RemoteException {
+        return new ArrayList<>(produtosPorCategoria.keySet());
+    }
+
+    public List<Integer> obterProdutosPorCategoria(String categoria) throws RemoteException {
+        return produtosPorCategoria.getOrDefault(categoria, new ArrayList<>());
+    }
+
+    public List<String> obterNomesProdutosPorCategoria(String categoria) throws RemoteException {
+        List<Integer> produtos = produtosPorCategoria.getOrDefault(categoria, new ArrayList<>());
+        List<String> nomesProdutos = new ArrayList<>();
+        for (int codigo : produtos) {
+            nomesProdutos.add(nome.getOrDefault(codigo, "Produto não encontrado"));
+        }
+        return nomesProdutos;
+    }
+
+    public void adicionarItemAoCarrinho(int codigo) throws RemoteException {
+        carrinho.add(codigo);
+        System.out.println("Produto " + codigo + " adicionado ao carrinho.");
+    }
+
+    public List<Integer> obterItensCarrinho() throws RemoteException {
+        return new ArrayList<>(carrinho);
     }
 }
