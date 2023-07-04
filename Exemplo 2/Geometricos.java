@@ -22,5 +22,21 @@ public class Geometricos extends  UnicastRemoteObject implements Formulas {
     public double Circulo(double raio) throws RemoteException {
         return (raio*raio)*3.14;
     }
+
+    
+    @Override
+    public double CalcularAd(double num1, double num2) throws RemoteException{
+        return (num1+num2);
+    }
+    
+    @Override
+    public double CalcularDiv(double num3, double num4) throws RemoteException{
+        return (num3/num4);
+    }
+    
+    @Override
+    public double CalcularSub(double num5, double num6) throws RemoteException{
+        return (num5-num6);
+    }
     
 }
