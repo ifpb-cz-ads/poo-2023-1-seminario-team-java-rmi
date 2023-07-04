@@ -1,3 +1,7 @@
+# O que é Java RMI?
+
+Java RMI (Remote Method Invocation) é um mecanismo para permitir a invocação de métodos que residem em diferentes máquinas virtuais Java (JVM). A JVM pode estar em diferentes máquinas ou podem estar na mesma máquina.  Em ambos os casos, o método pode ser executado em um endereço diferente do processo de chamada
+
 
 # Loja com Java RMI
 
