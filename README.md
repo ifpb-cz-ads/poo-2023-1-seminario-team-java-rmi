@@ -7,18 +7,18 @@ Java RMI (Remote Method Invocation) é um mecanismo para permitir a invocação 
 
 Este projeto implementa uma loja virtual utilizando a tecnologia Java RMI (Remote Method Invocation). O sistema permite que os clientes acessem informações sobre os produtos da loja, consultem o estoque, preços e adicionem itens ao carrinho de compras.
 
-## Funcionalidades
+### Funcionalidades
 
 - Consultar informações sobre produtos da loja, incluindo nome, estoque e preço.
 - Adicionar itens ao carrinho de compras.
 - Visualizar o carrinho de compras com os itens selecionados.
 
-## Tecnologias utilizadas
+### Tecnologias utilizadas
 
 - Java
 - Java RMI (Remote Method Invocation)
 
-## Estrutura do projeto
+### Estrutura do projeto
 
 O projeto está organizado da seguinte maneira:
 
@@ -28,7 +28,7 @@ O projeto está organizado da seguinte maneira:
 - `Server` - Inicializa o objeto remoto e registra no registro RMI para que os clientes possam localizá-lo.
 - `README.md` - Este arquivo que fornece informações sobre o projeto.
 
-## Como executar
+### Como executar
 
 1. Certifique-se de ter o JDK (Java Development Kit) instalado em sua máquina.
 2. Clone este repositório ou faça o download dos arquivos.
